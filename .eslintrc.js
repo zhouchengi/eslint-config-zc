@@ -6,7 +6,7 @@ module.exports = {
       extends: ['./react.js']
     },
     {
-      files: ['demo/vue.js'],
+      files: ['demo/vue.vue'],
       extends: ['./vue.js']
     }
   ]

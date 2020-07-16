@@ -9,21 +9,33 @@
   "author": "zhoucheng <zc@duiba.com.cn>",
   "main": "./index.js",
   "license": "ISC",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+  "scripts": {
+    "demo:base": "eslint --ext .js demo",
+    "demo:react": "eslint --ext .jsx demo",
+    "demo:vue": "eslint --ext .vue demo"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "babel-eslint": "^10.1.0",
-    "classnames": "^2.2.6",
-    "eslint": "^7.0.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
+    "vue-eslint-parser": "^7.1.0"
+  },
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "eslint": "^7.0.0",
     "react": "^16.13.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.6"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0"
   }
 }
