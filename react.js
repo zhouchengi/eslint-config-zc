@@ -3,6 +3,27 @@ module.exports = {
   plugins: ['react', 'react-hooks'],
   rules: {
     'jsx-quotes': [2, 'prefer-double'],
+    'react-hooks/exhaustive-deps': 2,
+    'react-hooks/rules-of-hooks': 2,
+    'react/forbid-component-props': 0,
+    'react/forbid-prop-types': 0,
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function'
+      }
+    ],
+    'react/jsx-child-element-spacing': 0,
+    'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-max-depth': 0,
+    'react/jsx-max-props-per-line': 0,
+    'react/jsx-no-literals': 0,
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/jsx-sort-props': 0,
     'react/jsx-wrap-multilines': [
       2,
       {
@@ -15,25 +36,14 @@ module.exports = {
         prop: 'parens-new-line'
       }
     ],
-    'react/require-optimization': 0,
-    'react/no-set-state': 0,
-    'react/jsx-indent': [2, 2],
-    'react/jsx-indent-props': [2, 2],
-    'react/jsx-sort-props': 0,
-    'react/forbid-component-props': 0,
-    'react/jsx-one-expression-per-line': 0,
-    'react/jsx-max-props-per-line': 0,
-    'react/jsx-max-depth': 0,
-    'react/jsx-no-literals': 0,
-    'react/jsx-props-no-spreading': 0,
-    'react/no-did-mount-set-state': 0,
-    'react/prop-types': 0,
-    'react/forbid-prop-types': 0,
-    'react/state-in-constructor': 0,
-    'react/no-multi-comp': 0,
     'react/no-array-index-key': 0,
-    'react-hooks/rules-of-hooks': 2,
-    'react-hooks/exhaustive-deps': 2
+    'react/no-danger': 0,
+    'react/no-did-mount-set-state': 0,
+    'react/no-multi-comp': 0,
+    'react/no-set-state': 0,
+    'react/prop-types': 0,
+    'react/require-optimization': 0,
+    'react/state-in-constructor': 0
   },
   settings: {
     react: {

@@ -20,9 +20,10 @@ module.exports = {
   },
   // 以当前目录为根目录，不再向上查找 .eslintrc.js
   root: true,
-  extends: ['standard', 'plugin:import/recommended'],
+  extends: ['standard', 'plugin:import/recommended', 'prettier'],
   rules: {
-    curly: [2, 'multi-line'],
+    'array-callback-return': 0,
+    curly: [2, 'all'],
     'import/newline-after-import': 2,
     'import/no-useless-path-segments': [
       2,
@@ -41,27 +42,27 @@ module.exports = {
       }
     ],
     'import/no-unresolved': 0,
+    indent: 0,
+    'no-alert': isLocal ? 0 : 2,
+    'no-console': isLocal ? 0 : 2,
+    'no-debugger': isLocal ? 0 : 2,
     'no-empty-function': 2,
     'no-multi-spaces': 2,
     'no-new': 0,
     'no-var': 2,
     // NOTE: Cannot read property 'range' of null Occurred (https://github.com/babel/babel-eslint/issues/681)
-    'template-curly-spacing': 0,
-    indent: 0,
     'object-shorthand': 2,
     'padded-blocks': [2, 'never'],
     'prefer-const': 2,
     'space-before-function-paren': [
       2,
       {
-        anonymous: 'never',
+        anonymous: 'always',
         named: 'never',
         asyncArrow: 'always'
       }
     ],
-    'no-alert': isLocal ? 0 : 2,
-    'no-console': isLocal ? 0 : 2,
-    'no-debugger': isLocal ? 0 : 2
+    'template-curly-spacing': 0
   },
   globals: {
     wx: true,
