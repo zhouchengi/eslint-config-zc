@@ -38,6 +38,21 @@ module.exports = {
           order: 'asc',
           caseInsensitive: true
         },
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+        pathGroups: [
+          {
+            pattern: 'src/**',
+            group: 'internal'
+          },
+          {
+            pattern: '@/**',
+            group: 'internal'
+          },
+          {
+            pattern: '~/**',
+            group: 'internal'
+          }
+        ],
         'newlines-between': 'always'
       }
     ],
@@ -50,7 +65,6 @@ module.exports = {
     'no-multi-spaces': 2,
     'no-new': 0,
     'no-var': 2,
-    // NOTE: Cannot read property 'range' of null Occurred (https://github.com/babel/babel-eslint/issues/681)
     'object-shorthand': 2,
     'padded-blocks': [2, 'never'],
     'prefer-const': 2,
@@ -62,10 +76,19 @@ module.exports = {
         asyncArrow: 'always'
       }
     ],
-    'template-curly-spacing': 0
+    'template-curly-spacing': [2, 'never'],
+    'padding-line-between-statements': [
+      2,
+      { blankLine: 'always', prev: ['*'], next: ['*'] },
+      { blankLine: 'always', prev: ['export'], next: ['export'] },
+      { blankLine: 'never', prev: ['break'], next: ['case', 'default'] },
+      { blankLine: 'never', prev: ['expression'], next: ['expression'] },
+      { blankLine: 'any', prev: ['import'], next: ['import'] },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
+    ]
   },
   globals: {
-    wx: true,
-    WeixinJSBridge: true
+    WeixinJSBridge: true,
+    wx: true
   }
 }
