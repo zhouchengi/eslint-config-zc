@@ -1,41 +1,42 @@
 {
-  "name": "@kjy/eslint-config-kjy",
+  "name": "eslint-config-zc",
   "version": "0.0.1",
-  "description": "kjy eslint config",
+  "description": "zc eslint config",
   "keywords": [
     "eslint",
     "eslint-config"
   ],
-  "author": "zhoucheng <zc@duiba.com.cn>",
+  "author": "zhoucheng <11467423@qq.com>",
   "main": "./index.js",
   "license": "ISC",
   "scripts": {
+    "demo": "npm run demo:base && npm run demo:react && npm run demo:react_ts && npm run demo:vue",
     "demo:base": "eslint --ext .js demo",
     "demo:react": "eslint --ext .jsx demo",
     "demo:react_ts": "eslint --ext .tsx demo",
     "demo:vue": "eslint --ext .vue demo"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
     "babel-eslint": "^10.1.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-html": "^6.1.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-standard": "^4.1.0",
-    "eslint-plugin-vue": "^7.6.0",
-    "vue-eslint-parser": "^7.5.0"
+    "eslint-plugin-vue": "^7.9.0",
+    "vue-eslint-parser": "^7.6.0"
   },
   "devDependencies": {
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "eslint": "^7.0.0",
-    "react": "^17.0.1",
-    "typescript": "^4.2.2"
+    "react": "^17.0.2",
+    "typescript": "^4.3.2"
   },
   "peerDependencies": {
     "eslint": ">=7.0.0"
